@@ -1,17 +1,33 @@
 import React, {useState} from 'react'
 import{ Text, TextInput, View, StyleSheet} from 'react-native'
 
-function TextBox(props: {defaultText: string}) {
+
+
+function EmailBox() {
   const [text, onChangeText] = useState('');
   return (
       <TextInput
       style = {styles.style}
       onChangeText={onChangeText}
       value={text}
-      placeholder={props.defaultText}
+      placeholder={'Email'}
+      textContentType='emailAddress'
       />
   );
 }
+
+function PasswordBox() {
+  const [text, onChangeText] = useState('');
+  return (
+      <TextInput
+      style = {styles.style}
+      onChangeText={onChangeText}
+      value={text}
+      placeholder={'Password'}
+      />
+  );
+}
+
 
 const styles = StyleSheet.create({
   style:{
@@ -19,7 +35,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderColor: 'black',
     borderWidth: 3,
-    width: '90%',
+    width: '100%',
     height: 50,
     borderRadius: 25,
     padding: 10,
@@ -28,4 +44,4 @@ const styles = StyleSheet.create({
 
 })
 
-export default TextBox;
+export {EmailBox, PasswordBox}
