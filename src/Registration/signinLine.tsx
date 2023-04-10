@@ -1,14 +1,15 @@
 import { Pressable, StyleSheet, Text, View, Alert } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native';
+import { RootStackParamList } from '../styles/RootStackParams';
 
-const RegisterLine = () => {
-    const navigation = useNavigation();
+const SigninLine = () => {
+    const navigation = useNavigation<RootStackParamList>();
   return (
     <View style={styles.container}>
-        <Text style={styles.newText}> New? Register </Text>
+        <Text style={styles.newText}> Already have an account? Sign in </Text>
         <Pressable 
-        onPress={() => navigation.navigate("Registration")}
+        onPress={() => navigation.navigate("SignIn")}
         style={styles.pressable}> 
             <Text style={styles.pressableText}>
                 Here
@@ -18,7 +19,7 @@ const RegisterLine = () => {
   )
 }
 
-export default RegisterLine
+export default SigninLine
 
 const styles = StyleSheet.create({
     container: {

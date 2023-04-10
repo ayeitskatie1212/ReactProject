@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 
-const GeneralContainer = StyleSheet.create({
-    container: {
+const Backgrounds = StyleSheet.create({
+    main: {
         paddingTop:150,
         width: '100%',
         height: '100%',
@@ -11,4 +11,14 @@ const GeneralContainer = StyleSheet.create({
         flexDirection: 'column',
     }, 
 })
-export {GeneralContainer}
+
+const Containers = StyleSheet.create({
+    InputContainers:{
+        width: '90%',
+        alignItems: 'center',
+        flexDirection: 'column',
+        gap: 20
+    }
+
+})
+export {Backgrounds, Containers}

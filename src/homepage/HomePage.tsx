@@ -5,7 +5,7 @@ import NavBar from '../components/NavBar'
 const HomePage = () => {
   return (
     <View style={styles.container}>
-      <NavBar />
+      <NavBar/>
     </View>
   )
 }

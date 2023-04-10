@@ -1,12 +1,19 @@
 import { StyleSheet, Text, View, TouchableOpacity, Touchable } from 'react-native'
 import React from 'react'
+import { useNavigation } from '@react-navigation/core'
+
 
 const NavBar = () => {
+    const navigation = useNavigation();
   return (
     <View style={styles.container}>
-        <TouchableOpacity style={styles.square}> 
+        <TouchableOpacity 
+        style={styles.square}
+        onPress={()=>navigation.navigate("SignIn")}
+        > 
+        {/* TODO: make this repitition into a function */}
             <Text> 
-                Home
+                TEMPORARY RETURN
             </Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.square}>

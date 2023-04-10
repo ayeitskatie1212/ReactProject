@@ -1,20 +1,25 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, Button} from 'react-native'
 import React from 'react'
 import LoginButton from './signinButton'
 import RegisterLine from './registerLine'
 import TextBox from '../components/textBoxes'
+import {Texts} from '../styles/text'
+import {Backgrounds, Containers} from '../styles/Containers'
+import ForgotPasswordLine from './forgotPasswordLine'
+
 const SignIn = () => {
   return (
-    <View style={styles.container}>
-      {/* <Text style={styles.headerText}>Sign in</Text>
-        <View style={styles.inputContainer}>
-          <EmailBox />
-          <PasswordBox />
-          <LoginButton/>
+    <View style={Backgrounds.main}>
+      <Text style={Texts.heading}>Sign in</Text>
+        <View style={Containers.InputContainers}>
+          <TextBox type="email" />
+          <TextBox type="pass" />
+          <LoginButton />
         </View>
-        <RegisterLine></RegisterLine> */}
-      <TextBox type="email" />
-      <TextBox type="pass" />
+        <ForgotPasswordLine/>
+        <RegisterLine></RegisterLine>
+
+
     </View>
     
   )
@@ -23,15 +28,7 @@ const SignIn = () => {
 export default SignIn;
 
 const styles = StyleSheet.create({
-    container: {
-        paddingTop:150,
-        width: '100%',
-        height: '100%',
-        gap: 50,
-        alignItems: 'center',
-        backgroundColor: "#887676",
-        flexDirection: 'column',
-    }, 
+  
     inputContainer: {
       width: '90%',
       alignItems: 'center',
@@ -40,7 +37,4 @@ const styles = StyleSheet.create({
 
       
     },
-    headerText: {
-      fontSize: 40,
-    }
 })
