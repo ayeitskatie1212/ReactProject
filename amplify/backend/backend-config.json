@@ -1,6 +1,24 @@
 {
+  "api": {
+    "reactproject": {
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [],
+          "defaultAuthentication": {
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 7
+            },
+            "authenticationType": "API_KEY"
+          }
+        }
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync"
+    }
+  },
   "auth": {
-    "ReactProject": {
+    "reactproject55deed95": {
       "customAuth": false,
       "dependsOn": [],
       "frontendAuthConfig": {
@@ -9,18 +27,13 @@
           "SMS"
         ],
         "passwordProtectionSettings": {
-          "passwordPolicyCharacters": [
-            "REQUIRES_LOWERCASE",
-            "REQUIRES_NUMBERS",
-            "REQUIRES_SYMBOLS",
-            "REQUIRES_UPPERCASE"
-          ],
+          "passwordPolicyCharacters": [],
           "passwordPolicyMinLength": 8
         },
         "signupAttributes": [
           "EMAIL",
-          "NAME",
           "FAMILY_NAME",
+          "NAME",
           "PHONE_NUMBER"
         ],
         "socialProviders": [],

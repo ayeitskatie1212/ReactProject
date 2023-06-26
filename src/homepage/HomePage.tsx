@@ -1,21 +1,21 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import NavBar from '../components/NavBar'
+import { StyleSheet, View } from "react-native";
+import NavBar from "../components/NavBar";
+import { HomeScreenProp } from "../types/navigationTypes";
 
-const HomePage = () => {
+const HomePage = ({ navigation, route }: HomeScreenProp) => {
   return (
     <View style={styles.container}>
-      <NavBar/>
+      <NavBar navigation={navigation} route={route} />
     </View>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;
 
 const styles = StyleSheet.create({
-    container: {
-        backgroundColor: '#887676',
-        height: '100%',
-        width: '100%'
-    },
-})
+  container: {
+    backgroundColor: "#887676",
+    height: "100%",
+    width: "100%",
+  },
+});
